@@ -279,6 +279,25 @@ button {
 .logo--footer .logo__name { color: var(--cream); }
 .logo--footer .logo__tagline { color: var(--beige); }
 
+/* Logo imagen: ocultar fondo blanco en contexto claro */
+.logo__icon {
+  mix-blend-mode: multiply;
+}
+
+/* Logo en footer (fondo negro): invertir colores para que se vea claro */
+.logo__icon--footer {
+  mix-blend-mode: normal;
+  filter: brightness(0) invert(0.75);
+}
+
+/* Ícono grande en brand block (sección hombre oscura) */
+.brand-block__icon--img {
+  mix-blend-mode: normal;
+  filter: brightness(0) invert(0.75);
+  border-radius: 0;
+  background: transparent;
+}
+
 
 /* ================================================
    5. HEADER
