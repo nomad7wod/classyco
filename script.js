@@ -10,7 +10,7 @@
    Cambia SOLO este valor. Formato: código de país + número.
    Ejemplo Peru: 51987654321
    ================================================ */
-const WA_NUMBER = 'NUMERO_AQUI';
+const WA_NUMBER = '51922142227';
 
 
 /* ================================================
