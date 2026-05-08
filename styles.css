@@ -407,10 +407,12 @@ button {
   background: rgba(22,18,18,0.4);
   z-index: 99;
   opacity: 0;
+  pointer-events: none; /* No bloquea clics cuando está invisible */
   transition: opacity var(--duration) var(--ease);
 }
 .nav-overlay.is-visible {
   opacity: 1;
+  pointer-events: auto;
 }
 
 
@@ -1464,7 +1466,7 @@ button {
 
 @media (max-width: 768px) {
 
-  /* Header: ocultar nav desktop, mostrar hamburguesa */
+  /* ---- Header ---- */
   .nav {
     position: fixed;
     top: var(--header-h);
@@ -1478,6 +1480,7 @@ button {
     transition: transform 320ms var(--ease);
     z-index: 100;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav.is-open {
@@ -1490,17 +1493,24 @@ button {
     gap: 0;
   }
 
+  /* Touch target mínimo 48px de alto */
   .nav__link {
     display: block;
-    padding: 0.875rem 0.5rem;
-    font-size: 0.9375rem;
+    padding: 0.9rem 0.5rem;
+    font-size: 1rem;
     border-bottom: 1px solid var(--gray-200);
     width: 100%;
     border-radius: 0;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
   }
 
   .nav-toggle {
     display: flex;
+    /* Touch target 44×44 mínimo */
+    width: 44px;
+    height: 44px;
   }
 
   .nav-overlay {
@@ -1511,8 +1521,9 @@ button {
     display: none;
   }
 
-  /* Hero */
+  /* ---- Hero ---- */
   .hero {
+    min-height: 100dvh; /* dvh: corrige barra de navegador en móvil */
     padding-bottom: var(--space-xl);
     align-items: flex-end;
   }
@@ -1521,53 +1532,78 @@ button {
     font-size: clamp(2.5rem, 12vw, 4rem);
   }
 
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
   .hero__actions {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Botones hero: ancho completo en móvil, fácil de pulsar */
+  .hero__actions .btn {
+    justify-content: center;
+    min-height: 52px;
+    font-size: 0.875rem;
   }
 
   .hero__scroll {
     display: none;
   }
 
-  /* Secciones */
+  /* ---- Secciones ---- */
   .section {
     padding-block: var(--space-xl);
   }
 
-  /* Productos */
+  /* ---- Productos ---- */
   .products-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 0.875rem;
   }
 
   .product-card__body {
-    padding: 1rem;
+    padding: 0.875rem;
   }
 
   .product-card__name {
-    font-size: 1rem;
+    font-size: 0.9375rem;
   }
 
   .product-card__desc {
     display: none;
   }
 
-  /* Feature cards */
+  /* Botón de la card: touch target correcto */
+  .product-card__footer .btn {
+    min-height: 40px;
+    padding: 0.5rem 0.875rem;
+  }
+
+  /* ---- Feature cards ---- */
   .feature-card {
-    grid-template-columns: 100px 1fr;
-    gap: 0.875rem;
+    grid-template-columns: 90px 1fr;
+    gap: 0.75rem;
+    padding: 0.875rem;
   }
 
   .feature-card__img-wrap {
-    width: 100px;
-    height: 120px;
+    width: 90px;
+    height: 110px;
   }
 
-  /* Pagos */
+  /* Botón feature card: touch target */
+  .feature-card__footer .btn {
+    min-height: 40px;
+  }
+
+  /* ---- Pagos ---- */
   .payment-grid {
     grid-template-columns: 1fr;
-    max-width: 360px;
+    max-width: 380px;
     margin-inline: auto;
   }
 
@@ -1576,7 +1612,7 @@ button {
     text-align: center;
   }
 
-  /* Footer */
+  /* ---- Footer ---- */
   .footer__grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1592,12 +1628,12 @@ button {
     text-align: center;
   }
 
-  /* FAB WhatsApp */
+  /* ---- FAB WhatsApp ---- */
   .whatsapp-fab {
     bottom: 1.25rem;
     right: 1.25rem;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
   }
 }
 
@@ -1608,27 +1644,62 @@ button {
 
 @media (max-width: 480px) {
   .products-grid {
-    grid-template-columns: 1fr;
-    max-width: 360px;
-    margin-inline: auto;
-  }
-
-  .product-card__desc {
-    display: block;
+    grid-template-columns: 1fr 1fr;
   }
 
   .hero__subtitle {
-    display: none;
+    display: block;
+    font-size: 0.9375rem;
   }
 
   .cta-block__actions {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .cta-block__actions .btn {
     width: 100%;
-    max-width: 320px;
     justify-content: center;
+    min-height: 52px;
   }
+
+  /* Brand story: imagen más compacta */
+  .brand-story__img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* ================================================
+   20. FIXES GLOBALES DE PERFORMANCE Y ACCESIBILIDAD
+   ================================================ */
+
+/* Ticker: aceleración GPU */
+.ticker__track {
+  will-change: transform;
+}
+
+/* Todos los botones y links: touch target mínimo */
+.btn,
+a.btn,
+.footer__nav-list a,
+.footer__social-link,
+.nav__link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Imágenes con fondo blanco en contexto oscuro */
+.logo__icon {
+  border-radius: 2px;
+}
+
+/* Evita zoom involuntario en inputs futuros */
+input, select, textarea {
+  font-size: 1rem;
+}
+
+/* Mejora de scroll en iOS para contenedores con overflow */
+.nav,
+.products-grid,
+.feature-grid__cards {
+  -webkit-overflow-scrolling: touch;
 }
