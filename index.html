@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO básico -->
+  <title>CLASSY &amp; CO | Ropa Activa con Estilo</title>
+  <meta name="description" content="Classy & Co — Ropa deportiva premium con estética minimalista y femenina. Sets activos, enterizos y más. Compra por WhatsApp. Stay Active. Stay Classy." />
+  <meta name="keywords" content="ropa deportiva, ropa activa, sets deportivos, enterizo, mujer, hombre, classy co, elegance in motion" />
+  <meta name="author" content="Classy & Co" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CLASSY & CO | Elegance in Motion" />
+  <meta property="og:description" content="Ropa activa con estilo, comodidad y actitud. Comprá por WhatsApp." />
+  <meta property="og:image" content="assets/hero.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       HEADER
+  ================================================ -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+
+      <!-- Logo -->
+      <a href="#inicio" class="logo" aria-label="Classy & Co — Inicio">
+        <!-- Icono SVG basado en el logo oficial -->
+        <svg class="logo__icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="22" cy="22" r="21" stroke="#161212" stroke-width="1.5"/>
+          <!-- Hoja central -->
+          <ellipse cx="22" cy="16" rx="3" ry="5" fill="#161212" opacity="0.85"/>
+          <!-- Hoja izquierda -->
+          <ellipse cx="16" cy="22" rx="5" ry="3" fill="#161212" opacity="0.7" transform="rotate(-30 16 22)"/>
+          <!-- Hoja derecha -->
+          <ellipse cx="28" cy="22" rx="5" ry="3" fill="#161212" opacity="0.7" transform="rotate(30 28 22)"/>
+          <!-- Tallo -->
+          <line x1="22" y1="28" x2="22" y2="34" stroke="#161212" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="logo__text">
+          <span class="logo__name">CLASSY<span class="logo__amp">&amp;</span>CO</span>
+          <span class="logo__tagline">ELEGANCE IN MOTION</span>
+        </div>
+      </a>
+
+      <!-- Navegación desktop -->
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#coleccion" class="nav__link">Colección</a></li>
+          <li><a href="#mujer" class="nav__link">Mujer</a></li>
+          <li><a href="#hombre" class="nav__link">Hombre</a></li>
+          <li><a href="#pagos" class="nav__link">Pagos</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón WhatsApp en header -->
+      <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20ver%20la%20colecci%C3%B3n"
+         class="btn btn--outline btn--sm header__cta"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Contactar por WhatsApp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        WhatsApp
+      </a>
+
+      <!-- Botón hamburguesa (móvil) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Overlay menú móvil -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+
+  <!-- ================================================
+       HERO
+  ================================================ -->
+  <section class="hero" id="inicio" aria-label="Sección principal">
+    <div class="hero__media">
+      <img
+        src="assets/hero.jpg"
+        alt="Dos modelos con ropa deportiva Classy & Co — enterizos negro y gris sobre fondo beige"
+        class="hero__img"
+        loading="eager"
+      />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content container">
+      <p class="hero__eyebrow">Colección Elemental</p>
+      <h1 class="hero__title">Elegance<br /><em>in Motion</em></h1>
+      <p class="hero__subtitle">Ropa activa con estilo, comodidad y actitud.</p>
+      <div class="hero__actions">
+        <a href="#coleccion" class="btn btn--primary">Ver colección</a>
+        <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20comprar"
+           class="btn btn--ghost"
+           target="_blank" rel="noopener noreferrer">
+          Comprar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       BANDA DE SLOGAN
+  ================================================ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>Stay Active</span>
+      <span class="ticker__dot">·</span>
+      <span>Stay Classy</span>
+      <span class="ticker__dot">·</span>
+      <span>Elegance in Motion</span>
+      <span class="ticker__dot">·</span>
+      <span>Colección Elemental</span>
+      <span class="ticker__dot">·</span>
+      <span>Stay Active</span>
+      <span class="ticker__dot">·</span>
+      <span>Stay Classy</span>
+      <span class="ticker__dot">·</span>
+      <span>Elegance in Motion</span>
+      <span class="ticker__dot">·</span>
+      <span>Colección Elemental</span>
+      <span class="ticker__dot">·</span>
+    </div>
+  </div>
+
+
+  <!-- ================================================
+       COLECCIÓN COMPLETA
+  ================================================ -->
+  <section class="section" id="coleccion" aria-labelledby="coleccion-title">
+    <div class="container">
+
+      <div class="section__header">
+        <p class="section__eyebrow">Colección Elemental</p>
+        <h2 class="section__title" id="coleccion-title">Nuestra Colección</h2>
+        <p class="section__subtitle">Prendas diseñadas para quienes viven el movimiento sin renunciar al estilo.</p>
+      </div>
+
+      <!-- Grid de productos -->
+      <div class="products-grid">
+
+        <!-- PRODUCTO 1: Set Active Mujer -->
+        <article class="product-card" data-category="mujer">
+          <div class="product-card__media">
+            <img
+              src="assets/mujer-set.jpg"
+              alt="Set Active Black Mujer — top deportivo y short negro con detalles blancos"
+              class="product-card__img"
+              loading="lazy"
+            />
+            <span class="product-card__badge product-card__badge--mujer">Mujer</span>
+            <div class="product-card__quick-actions">
+              <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Set%20Active%20Black%20Mujer"
+                 class="product-card__quick-btn"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Consultar Set Active Black Mujer por WhatsApp">
+                Ver en WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Mujer · Sets</p>
+            <h3 class="product-card__name">Set Active Black</h3>
+            <p class="product-card__desc">Top deportivo y short a juego. Tela compresiva de alta calidad, diseño minimalista con detalles en blanco.</p>
+            <div class="product-card__sizes">
+              <span class="size-label">Tallas:</span>
+              <span class="size-tag">XS</span>
+              <span class="size-tag">S</span>
+              <span class="size-tag">M</span>
+              <span class="size-tag">L</span>
+            </div>
+            <div class="product-card__footer">
+              <!-- PRECIO: modifica este valor fácilmente -->
+              <span class="product-card__price">S/ 120</span>
+              <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Set%20Active%20Black%20Mujer"
+                 class="btn btn--dark btn--sm"
+                 target="_blank" rel="noopener noreferrer">
+                Consultar
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 2: Enterizo Sport Mujer -->
+        <article class="product-card" data-category="mujer">
+          <div class="product-card__media">
+            <img
+              src="assets/mujer-enterizo.jpg"
+              alt="Enterizo Sport Mujer — enterizo deportivo negro ajustado con tiras en contraste"
+              class="product-card__img"
+              loading="lazy"
+            />
+            <span class="product-card__badge product-card__badge--mujer">Mujer</span>
+            <div class="product-card__quick-actions">
+              <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Enterizo%20Sport%20Mujer"
+                 class="product-card__quick-btn"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Consultar Enterizo Sport Mujer por WhatsApp">
+                Ver en WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Mujer · Enterizos</p>
+            <h3 class="product-card__name">Enterizo Sport</h3>
+            <p class="product-card__desc">Enterizo ajustado de una pieza. Perfecto para el gym, yoga o usar como conjunto base en el día a día.</p>
+            <div class="product-card__sizes">
+              <span class="size-label">Tallas:</span>
+              <span class="size-tag">XS</span>
+              <span class="size-tag">S</span>
+              <span class="size-tag">M</span>
+              <span class="size-tag">L</span>
+            </div>
+            <div class="product-card__footer">
+              <!-- PRECIO: modifica este valor fácilmente -->
+              <span class="product-card__price">S/ 95</span>
+              <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Enterizo%20Sport%20Mujer"
+                 class="btn btn--dark btn--sm"
+                 target="_blank" rel="noopener noreferrer">
+                Consultar
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 3: Set Active Hombre -->
+        <article class="product-card" data-category="hombre">
+          <div class="product-card__media">
+            <!-- Placeholder visual elegante para producto hombre -->
+            <div class="product-card__placeholder" aria-label="Imagen próximamente — Set Active Hombre">
+              <div class="product-card__placeholder-inner">
+                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="30" cy="30" r="29" stroke="#9C8D7C" stroke-width="1"/>
+                  <ellipse cx="30" cy="22" rx="4" ry="6" fill="#9C8D7C" opacity="0.6"/>
+                  <ellipse cx="22" cy="30" rx="6" ry="4" fill="#9C8D7C" opacity="0.5" transform="rotate(-30 22 30)"/>
+                  <ellipse cx="38" cy="30" rx="6" ry="4" fill="#9C8D7C" opacity="0.5" transform="rotate(30 38 30)"/>
+                  <line x1="30" y1="37" x2="30" y2="44" stroke="#9C8D7C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <p>Imagen próximamente</p>
+              </div>
+            </div>
+            <span class="product-card__badge product-card__badge--hombre">Hombre</span>
+            <div class="product-card__quick-actions">
+              <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Set%20Active%20Hombre"
+                 class="product-card__quick-btn"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Consultar Set Active Hombre por WhatsApp">
+                Ver en WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Hombre · Sets</p>
+            <h3 class="product-card__name">Set Active Hombre</h3>
+            <p class="product-card__desc">Polera técnica y short deportivo a juego. Diseño limpio y funcional para entrenamiento o uso casual.</p>
+            <div class="product-card__sizes">
+              <span class="size-label">Tallas:</span>
+              <span class="size-tag">S</span>
+              <span class="size-tag">M</span>
+              <span class="size-tag">L</span>
+              <span class="size-tag">XL</span>
+            </div>
+            <div class="product-card__footer">
+              <!-- PRECIO: modifica este valor fácilmente -->
+              <span class="product-card__price">S/ 110</span>
+              <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Set%20Active%20Hombre"
+                 class="btn btn--dark btn--sm"
+                 target="_blank" rel="noopener noreferrer">
+                Consultar
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRODUCTO 4: Short Performance Hombre -->
+        <article class="product-card" data-category="hombre">
+          <div class="product-card__media">
+            <div class="product-card__placeholder" aria-label="Imagen próximamente — Short Performance Hombre">
+              <div class="product-card__placeholder-inner">
+                <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="30" cy="30" r="29" stroke="#9C8D7C" stroke-width="1"/>
+                  <ellipse cx="30" cy="22" rx="4" ry="6" fill="#9C8D7C" opacity="0.6"/>
+                  <ellipse cx="22" cy="30" rx="6" ry="4" fill="#9C8D7C" opacity="0.5" transform="rotate(-30 22 30)"/>
+                  <ellipse cx="38" cy="30" rx="6" ry="4" fill="#9C8D7C" opacity="0.5" transform="rotate(30 38 30)"/>
+                  <line x1="30" y1="37" x2="30" y2="44" stroke="#9C8D7C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <p>Imagen próximamente</p>
+              </div>
+            </div>
+            <span class="product-card__badge product-card__badge--hombre">Hombre</span>
+            <div class="product-card__quick-actions">
+              <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Short%20Performance%20Hombre"
+                 class="product-card__quick-btn"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Consultar Short Performance Hombre por WhatsApp">
+                Ver en WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <p class="product-card__category">Hombre · Shorts</p>
+            <h3 class="product-card__name">Short Performance</h3>
+            <p class="product-card__desc">Short de alto rendimiento con tela transpirable. Diseño minimalista con logo Classy & Co bordado.</p>
+            <div class="product-card__sizes">
+              <span class="size-label">Tallas:</span>
+              <span class="size-tag">S</span>
+              <span class="size-tag">M</span>
+              <span class="size-tag">L</span>
+              <span class="size-tag">XL</span>
+            </div>
+            <div class="product-card__footer">
+              <!-- PRECIO: modifica este valor fácilmente -->
+              <span class="product-card__price">S/ 65</span>
+              <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Short%20Performance%20Hombre"
+                 class="btn btn--dark btn--sm"
+                 target="_blank" rel="noopener noreferrer">
+                Consultar
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /products-grid -->
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECCIÓN MUJER
+  ================================================ -->
+  <section class="section section--alt" id="mujer" aria-labelledby="mujer-title">
+    <div class="container">
+
+      <div class="section__header">
+        <p class="section__eyebrow">Para ella</p>
+        <h2 class="section__title" id="mujer-title">Colección Mujer</h2>
+        <p class="section__subtitle">Prendas que celebran la fuerza y la elegancia. Diseñadas para moverse con confianza.</p>
+      </div>
+
+      <div class="feature-grid">
+
+        <!-- Feature izquierda: imagen grande -->
+        <div class="feature-grid__media">
+          <img
+            src="assets/mujer-set.jpg"
+            alt="Set Active Black Mujer — Set deportivo negro con detalles en blanco, estética premium"
+            class="feature-grid__img"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Feature derecha: tarjetas verticales -->
+        <div class="feature-grid__cards">
+
+          <div class="feature-card">
+            <div class="feature-card__img-wrap">
+              <img
+                src="assets/mujer-set.jpg"
+                alt="Set Active Black — top y short deportivo negro"
+                loading="lazy"
+              />
+            </div>
+            <div class="feature-card__body">
+              <span class="feature-card__tag">Sets</span>
+              <h3 class="feature-card__name">Set Active Black</h3>
+              <p class="feature-card__desc">Top + short compresivo. Detalles en blanco hueso. Colección Elemental.</p>
+              <div class="feature-card__footer">
+                <span class="feature-card__price">S/ 120</span>
+                <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Set%20Active%20Black%20Mujer"
+                   class="btn btn--outline btn--sm"
+                   target="_blank" rel="noopener noreferrer">
+                  Consultar
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__img-wrap">
+              <img
+                src="assets/mujer-enterizo.jpg"
+                alt="Enterizo Sport Mujer — enterizo negro ajustado con tiras finas"
+                loading="lazy"
+              />
+            </div>
+            <div class="feature-card__body">
+              <span class="feature-card__tag">Enterizos</span>
+              <h3 class="feature-card__name">Enterizo Sport</h3>
+              <p class="feature-card__desc">Una pieza. Máxima comodidad. Ideal para gym, pilates o día a día.</p>
+              <div class="feature-card__footer">
+                <span class="feature-card__price">S/ 95</span>
+                <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Enterizo%20Sport%20Mujer"
+                   class="btn btn--outline btn--sm"
+                   target="_blank" rel="noopener noreferrer">
+                  Consultar
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /feature-grid__cards -->
+      </div><!-- /feature-grid -->
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECCIÓN HOMBRE
+  ================================================ -->
+  <section class="section" id="hombre" aria-labelledby="hombre-title">
+    <div class="container">
+
+      <div class="section__header">
+        <p class="section__eyebrow">Para él</p>
+        <h2 class="section__title" id="hombre-title">Colección Hombre</h2>
+        <p class="section__subtitle">Estilo funcional y premium. Diseño limpio para quienes entrenan con actitud.</p>
+      </div>
+
+      <div class="feature-grid feature-grid--reverse">
+
+        <!-- Feature izquierda: tarjetas verticales -->
+        <div class="feature-grid__cards">
+
+          <div class="feature-card">
+            <div class="feature-card__img-wrap feature-card__img-wrap--placeholder">
+              <div class="mini-placeholder" aria-label="Imagen próximamente">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="19" stroke="#C6BEB5" stroke-width="1"/>
+                  <ellipse cx="20" cy="14" rx="3" ry="4" fill="#C6BEB5"/>
+                  <ellipse cx="14" cy="20" rx="4" ry="3" fill="#C6BEB5" opacity="0.7" transform="rotate(-30 14 20)"/>
+                  <ellipse cx="26" cy="20" rx="4" ry="3" fill="#C6BEB5" opacity="0.7" transform="rotate(30 26 20)"/>
+                </svg>
+                <span>Próximamente</span>
+              </div>
+            </div>
+            <div class="feature-card__body">
+              <span class="feature-card__tag">Sets</span>
+              <h3 class="feature-card__name">Set Active Hombre</h3>
+              <p class="feature-card__desc">Polera técnica + short deportivo. Diseño funcional con identidad Classy & Co.</p>
+              <div class="feature-card__footer">
+                <span class="feature-card__price">S/ 110</span>
+                <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Set%20Active%20Hombre"
+                   class="btn btn--outline btn--sm"
+                   target="_blank" rel="noopener noreferrer">
+                  Consultar
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__img-wrap feature-card__img-wrap--placeholder">
+              <div class="mini-placeholder" aria-label="Imagen próximamente">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="20" cy="20" r="19" stroke="#C6BEB5" stroke-width="1"/>
+                  <ellipse cx="20" cy="14" rx="3" ry="4" fill="#C6BEB5"/>
+                  <ellipse cx="14" cy="20" rx="4" ry="3" fill="#C6BEB5" opacity="0.7" transform="rotate(-30 14 20)"/>
+                  <ellipse cx="26" cy="20" rx="4" ry="3" fill="#C6BEB5" opacity="0.7" transform="rotate(30 26 20)"/>
+                </svg>
+                <span>Próximamente</span>
+              </div>
+            </div>
+            <div class="feature-card__body">
+              <span class="feature-card__tag">Shorts</span>
+              <h3 class="feature-card__name">Short Performance</h3>
+              <p class="feature-card__desc">Tela transpirable de alta performance. Logo bordado. Elegante dentro y fuera del gym.</p>
+              <div class="feature-card__footer">
+                <span class="feature-card__price">S/ 65</span>
+                <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar%20por%20el%20producto%20Short%20Performance%20Hombre"
+                   class="btn btn--outline btn--sm"
+                   target="_blank" rel="noopener noreferrer">
+                  Consultar
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /feature-grid__cards -->
+
+        <!-- Feature derecha: imagen grande -->
+        <div class="feature-grid__media feature-grid__media--dark">
+          <div class="feature-grid__brand-block">
+            <svg class="brand-block__icon" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="40" cy="40" r="38" stroke="#C6BEB5" stroke-width="1.5"/>
+              <ellipse cx="40" cy="28" rx="6" ry="10" fill="#C6BEB5" opacity="0.7"/>
+              <ellipse cx="26" cy="40" rx="10" ry="6" fill="#C6BEB5" opacity="0.6" transform="rotate(-30 26 40)"/>
+              <ellipse cx="54" cy="40" rx="10" ry="6" fill="#C6BEB5" opacity="0.6" transform="rotate(30 54 40)"/>
+              <line x1="40" y1="54" x2="40" y2="64" stroke="#C6BEB5" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <p class="brand-block__name">CLASSY<span>&amp;</span>CO</p>
+            <p class="brand-block__slogan">Stay Active.<br />Stay Classy.</p>
+            <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20ver%20la%20colecci%C3%B3n%20masculina"
+               class="btn btn--light"
+               target="_blank" rel="noopener noreferrer">
+              Ver colección completa
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /feature-grid -->
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECCIÓN MÉTODOS DE PAGO
+  ================================================ -->
+  <section class="section section--beige" id="pagos" aria-labelledby="pagos-title">
+    <div class="container">
+
+      <div class="section__header">
+        <p class="section__eyebrow">Sin complicaciones</p>
+        <h2 class="section__title" id="pagos-title">Métodos de Pago</h2>
+        <p class="section__subtitle">Comprá fácil y rápido con los métodos de pago que ya usás.</p>
+      </div>
+
+      <div class="payment-grid">
+
+        <!-- Yape -->
+        <div class="payment-card">
+          <div class="payment-card__icon payment-card__icon--yape" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="#6C2E8C"/>
+              <path d="M24 10L14 28h7l-3 10 17-18h-8l5-10H24z" fill="white"/>
+            </svg>
+          </div>
+          <h3 class="payment-card__name">Yape</h3>
+          <p class="payment-card__desc">Pago instantáneo desde tu app de Yape. Seguro y sin costo adicional.</p>
+        </div>
+
+        <!-- Plin -->
+        <div class="payment-card">
+          <div class="payment-card__icon payment-card__icon--plin" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="#00BFA5"/>
+              <circle cx="24" cy="24" r="10" stroke="white" stroke-width="2.5"/>
+              <path d="M20 24l3 3 6-6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="payment-card__name">Plin</h3>
+          <p class="payment-card__desc">Transferencia inmediata mediante la plataforma Plin desde tu banco.</p>
+        </div>
+
+        <!-- Efectivo -->
+        <div class="payment-card">
+          <div class="payment-card__icon payment-card__icon--cash" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="48" rx="12" fill="#161212"/>
+              <rect x="10" y="16" width="28" height="18" rx="3" stroke="#C6BEB5" stroke-width="2"/>
+              <circle cx="24" cy="25" r="5" stroke="#C6BEB5" stroke-width="2"/>
+              <line x1="16" y1="21" x2="16" y2="29" stroke="#C6BEB5" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="32" y1="21" x2="32" y2="29" stroke="#C6BEB5" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="payment-card__name">Efectivo</h3>
+          <p class="payment-card__desc">Acepto efectivo en punto de entrega o con coordinación previa por WhatsApp.</p>
+        </div>
+
+      </div><!-- /payment-grid -->
+
+      <!-- Aviso importante -->
+      <div class="payment-notice">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+        </svg>
+        <p>La confirmación del pedido se realiza por WhatsApp. Te responderemos en menos de 24 horas.</p>
+        <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20hacer%20un%20pedido"
+           class="btn btn--dark"
+           target="_blank" rel="noopener noreferrer">
+          Hacer un pedido
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECCIÓN MARCA / ABOUT
+  ================================================ -->
+  <section class="section section--brand" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="brand-story">
+
+        <div class="brand-story__media">
+          <img
+            src="assets/brand.jpg"
+            alt="Packaging tubos Classy & Co en colores beige, taupe y negro sobre fondo natural"
+            class="brand-story__img"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="brand-story__content">
+          <p class="section__eyebrow">Nuestra historia</p>
+          <h2 class="brand-story__title" id="about-title">
+            Más que ropa.<br /><em>Es un estilo de vida.</em>
+          </h2>
+          <p class="brand-story__text">
+            Classy & Co nace para combinar movimiento, comodidad y elegancia en prendas versátiles para el día a día. Creemos que activarse no significa renunciar al estilo.
+          </p>
+          <p class="brand-story__text">
+            Cada prenda está pensada para acompañarte: del gym al café, de la clase de yoga al día de trabajo. Sin compromisos. Con carácter.
+          </p>
+          <div class="brand-story__slogan">
+            <span>Stay Active.</span>
+            <span>Stay Classy.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       SECCIÓN CONTACTO / CTA FINAL
+  ================================================ -->
+  <section class="section section--dark" id="contacto" aria-labelledby="contacto-title">
+    <div class="container">
+      <div class="cta-block">
+
+        <p class="section__eyebrow section__eyebrow--light">Hablemos</p>
+        <h2 class="cta-block__title" id="contacto-title">¿Lista para tu próxima prenda?</h2>
+        <p class="cta-block__subtitle">Escribinos por WhatsApp y te asesoramos con tallas, colores y disponibilidad.</p>
+
+        <div class="cta-block__actions">
+          <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20conocer%20los%20productos"
+             class="btn btn--primary btn--lg"
+             target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Escribir por WhatsApp
+          </a>
+          <a href="#coleccion" class="btn btn--ghost-light btn--lg">Ver colección</a>
+        </div>
+
+        <div class="cta-block__info">
+          <div class="cta-info-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <span>WhatsApp directo</span>
+          </div>
+          <div class="cta-info-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span>Respuesta en &lt; 24 h</span>
+          </div>
+          <div class="cta-info-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+            <span>Atención personalizada</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Columna: marca -->
+        <div class="footer__brand">
+          <a href="#inicio" class="logo logo--footer" aria-label="Classy & Co — Volver al inicio">
+            <svg class="logo__icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="22" cy="22" r="21" stroke="#C6BEB5" stroke-width="1.5"/>
+              <ellipse cx="22" cy="16" rx="3" ry="5" fill="#C6BEB5" opacity="0.85"/>
+              <ellipse cx="16" cy="22" rx="5" ry="3" fill="#C6BEB5" opacity="0.7" transform="rotate(-30 16 22)"/>
+              <ellipse cx="28" cy="22" rx="5" ry="3" fill="#C6BEB5" opacity="0.7" transform="rotate(30 28 22)"/>
+              <line x1="22" y1="28" x2="22" y2="34" stroke="#C6BEB5" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div class="logo__text">
+              <span class="logo__name">CLASSY<span class="logo__amp">&amp;</span>CO</span>
+              <span class="logo__tagline">ELEGANCE IN MOTION</span>
+            </div>
+          </a>
+          <p class="footer__brand-desc">Ropa activa premium con estética minimalista y femenina. Lima, Perú.</p>
+        </div>
+
+        <!-- Columna: navegación -->
+        <nav class="footer__nav" aria-label="Navegación footer">
+          <h4 class="footer__nav-title">Explorar</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#coleccion">Colección</a></li>
+            <li><a href="#mujer">Mujer</a></li>
+            <li><a href="#hombre">Hombre</a></li>
+            <li><a href="#pagos">Métodos de pago</a></li>
+          </ul>
+        </nav>
+
+        <!-- Columna: contacto -->
+        <div class="footer__contact">
+          <h4 class="footer__nav-title">Contacto</h4>
+          <ul class="footer__contact-list">
+            <li>
+              <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%21"
+                 target="_blank" rel="noopener noreferrer"
+                 class="footer__social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                WhatsApp
+              </a>
+            </li>
+            <li>
+              <!-- Reemplaza USUARIO con tu @instagram -->
+              <a href="https://instagram.com/USUARIO_AQUI"
+                 target="_blank" rel="noopener noreferrer"
+                 class="footer__social-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /footer__grid -->
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Classy &amp; Co. Todos los derechos reservados.</p>
+        <p class="footer__slogan">Stay Active. Stay Classy.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/NUMERO_AQUI?text=Hola%20Classy%20%26%20Co%2C%20quiero%20consultar"
+     class="whatsapp-fab"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
